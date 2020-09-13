@@ -14,7 +14,7 @@ uint16_t clockDivider = 50;
  * nul: no operation, default if odd data was sent or blank line
  * clk: will perform ARG number of clock cycles without resetting 6502
  * clr: will behave the same as clk but will toggle reset line for 3 clock cycles first
- * run: will free run the clock until data is received again
+ * run: will free run the clock until Serial data is received again
  * spd: change the clock pulse length in milliseconds delay is used to speeds are approximate
  */
 
@@ -112,11 +112,11 @@ void getCommand(uint16_t commar[])
       Serial.print(inByte);
     }
   }
+
   char arg[7];
   uint8_t equator = 0;
-  //pull command string from buffer
-  
   commar[0] = 0;
+
   //map command string to command integer
   for(uint16_t i = 0; i < numCOMMANDS; i++)
   {
@@ -137,7 +137,9 @@ void getCommand(uint16_t commar[])
       equator = 0;
     }
   }
+
   uint8_t argIndex = 0;
+
   //pull argument from buffer
   for(uint8_t i = 3; i < index; i++)
   {
@@ -150,6 +152,9 @@ void getCommand(uint16_t commar[])
   commar[1] = atoi(arg);
 }
 
+/* clr()
+ * run through 3 clock cycles with mpu in reset
+ */
 void clr()
 {
   digitalWrite(RESET, LOW);
@@ -164,6 +169,9 @@ void clr()
   digitalWrite(RESET, HIGH);
 }
 
+/* clk(count)
+ * run through count clock cycles calling onClock to print data to serial port
+ */
 void clk(uint16_t count)
 {
   for(uint16_t i = 0; i < count; i++)
@@ -184,6 +192,15 @@ void loop()
     getCommand(command);
     switch(command[0])
     {
+      case 4: //spd
+        clockDivider = command[1]/2;
+        break;
+      case 3: //run
+        while(!Serial.available())
+        {
+          clk(1);
+        }
+        break;
       case 2: //clr
         clr();
         //falls over to clk command

@@ -1,0 +1,12 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 62256
+D Static RAM 256Kb (32K x 8), DIP-28/SOIC-28
+K Static RAM 32K
+$ENDCMP
+#
+$CMP 6502
+D WDC 6502 8-Bit Microprocessor
+$ENDCMP
+#
+#End Doc Library

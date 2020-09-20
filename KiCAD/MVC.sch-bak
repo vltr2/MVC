@@ -285,6 +285,8 @@ a13
 Wire Bus Line
 	3500 3900 5500 3900
 Wire Bus Line
+	5500 3900 5500 1950
+Wire Bus Line
 	3500 3900 3500 4100
 Connection ~ 3500 3900
 Wire Wire Line
@@ -339,6 +341,14 @@ F 3 "~" H 1850 4450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1850 4600 2350 4600
+Wire Bus Line
+	2650 4100 3500 4100
+Wire Bus Line
+	2650 3450 2650 4100
+Wire Bus Line
+	1000 2750 1000 4100
+Wire Bus Line
+	3500 1900 3500 3900
 Connection ~ 1850 4600
 $Comp
 L power:GND #PWR?
@@ -364,165 +374,4 @@ F 3 "" H 1850 4300 50  0001 C CNN
 $EndComp
 Text Label 2350 4600 2    50   ~ 0
 FBank
-$Comp
-L 74xx:74HC00 U?
-U 5 1 5F67C1DA
-P 1250 5900
-F 0 "U?" H 1480 5946 50  0000 L CNN
-F 1 "74HC00" H 1480 5855 50  0000 L CNN
-F 2 "" H 1250 5900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 1250 5900 50  0001 C CNN
-	5    1250 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U?
-U 2 1 5F681F72
-P 3900 5100
-F 0 "U?" H 3900 5425 50  0000 C CNN
-F 1 "74HC00" H 3900 5334 50  0000 C CNN
-F 2 "" H 3900 5100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 3900 5100 50  0001 C CNN
-	2    3900 5100
-	1    0    0    -1  
-$EndComp
-Connection ~ 3250 4700
-Wire Wire Line
-	3450 5000 3450 5100
-Wire Wire Line
-	3450 5200 3600 5200
-Wire Wire Line
-	3450 5000 3600 5000
-Wire Wire Line
-	3450 5100 3250 5100
-Wire Wire Line
-	3250 4700 3250 5100
-Connection ~ 3450 5100
-Wire Wire Line
-	3450 5100 3450 5200
-Wire Wire Line
-	4200 5100 5000 5100
-Wire Wire Line
-	5600 5000 5700 5000
-Wire Wire Line
-	5700 3650 5850 3650
-Wire Wire Line
-	5700 5000 5700 3650
-$Comp
-L 74xx:74HC00 U?
-U 3 1 5F6888EF
-P 5300 5000
-F 0 "U?" H 5300 5325 50  0000 C CNN
-F 1 "74HC00" H 5300 5234 50  0000 C CNN
-F 2 "" H 5300 5000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 5300 5000 50  0001 C CNN
-	3    5300 5000
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	5500 3650 5600 3550
-Wire Wire Line
-	5600 3550 5850 3550
-Text Label 5600 3550 0    50   ~ 0
-a15
-Entry Wire Line
-	5500 3350 5600 3250
-Entry Wire Line
-	5500 3250 5600 3150
-Entry Wire Line
-	5500 3150 5600 3050
-Entry Wire Line
-	5500 3050 5600 2950
-Entry Wire Line
-	5500 2950 5600 2850
-Entry Wire Line
-	5500 2850 5600 2750
-Entry Wire Line
-	5500 2750 5600 2650
-Entry Wire Line
-	5500 2650 5600 2550
-Entry Wire Line
-	5500 2550 5600 2450
-Entry Wire Line
-	5500 2450 5600 2350
-Entry Wire Line
-	5500 2350 5600 2250
-Entry Wire Line
-	5500 2250 5600 2150
-Entry Wire Line
-	5500 2150 5600 2050
-Entry Wire Line
-	5500 2050 5600 1950
-Entry Wire Line
-	5500 1950 5600 1850
-Wire Wire Line
-	5600 1850 5850 1850
-Wire Wire Line
-	5600 1950 5850 1950
-Wire Wire Line
-	5600 2050 5850 2050
-Wire Wire Line
-	5600 2150 5850 2150
-Wire Wire Line
-	5600 2250 5850 2250
-Wire Wire Line
-	5600 2350 5850 2350
-Wire Wire Line
-	5600 2450 5850 2450
-Wire Wire Line
-	5600 2550 5850 2550
-Wire Wire Line
-	5600 2650 5850 2650
-Wire Wire Line
-	5600 2750 5850 2750
-Wire Wire Line
-	5600 2850 5850 2850
-Wire Wire Line
-	5600 2950 5850 2950
-Wire Wire Line
-	5600 3050 5850 3050
-Wire Wire Line
-	5600 3150 5850 3150
-Wire Wire Line
-	5600 3250 5850 3250
-Wire Bus Line
-	2650 4100 3500 4100
-Wire Bus Line
-	2650 3450 2650 4100
-Wire Bus Line
-	1000 2750 1000 4100
-Wire Bus Line
-	3500 1900 3500 3900
-Wire Bus Line
-	5500 1950 5500 3900
-Text Label 5600 3250 0    50   ~ 0
-a14
-Text Label 5600 3150 0    50   ~ 0
-a13
-Text Label 5600 3050 0    50   ~ 0
-a12
-Text Label 5600 2950 0    50   ~ 0
-a11
-Text Label 5600 2850 0    50   ~ 0
-a10
-Text Label 5600 2750 0    50   ~ 0
-a9
-Text Label 5600 2650 0    50   ~ 0
-a8
-Text Label 5600 2550 0    50   ~ 0
-a7
-Text Label 5600 2450 0    50   ~ 0
-a6
-Text Label 5600 2350 0    50   ~ 0
-a5
-Text Label 5600 2250 0    50   ~ 0
-a4
-Text Label 5600 2150 0    50   ~ 0
-a3
-Text Label 5600 2050 0    50   ~ 0
-a2
-Text Label 5600 1950 0    50   ~ 0
-a1
-Text Label 5600 1850 0    50   ~ 0
-a0
 $EndSCHEMATC

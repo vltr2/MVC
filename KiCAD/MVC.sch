@@ -1881,7 +1881,7 @@ Wire Wire Line
 Text Label 4300 2600 2    50   ~ 0
 CLK
 Text Label 14300 7850 0    50   ~ 0
-~BE~
+BE
 Text Label 13600 7850 2    50   ~ 0
 R~W~
 Text Label 14300 7750 0    50   ~ 0

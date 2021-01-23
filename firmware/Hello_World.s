@@ -63,7 +63,7 @@ lcd_busy:
 	pla         			; Pull character back from the stack
 	rts
 
-lcd_instruction:
+lcd_instruction:				;POSSIBLE BUG: Below should be jsr lcd_wait?
 	jsr lcd_busy		    ; Wait until LCD is ready for character before sending
 	sta PORTB 		        ; Write out data
 	lda #0 		    	    ; Clear control  pins
@@ -74,7 +74,7 @@ lcd_instruction:
 	sta PORTA
 	rts
 
-lcd_character:
+lcd_character:			;POSSIBLE BUG: Below should be jsr lcd_wait?
 	jsr lcd_busy	    	; Wait until LCD is ready for character before sending
 	sta PORTB 	        	; Write out data
 	lda #RS			        ; Clear control  pins except RS

@@ -1,3 +1,8 @@
+; 2020-02-06
+; This hello world is essentially a modified version of Ben Eater's(eater.net) hello_world_final.s
+; which has been modified to run in the different address space I am using on this project
+; and is used as a basic hardware test.
+
 ;65C22 Registers
 PORTB = $9F00
 PORTA = $9F01
@@ -32,12 +37,14 @@ reset:
 	lda #%00000001	    	; Clear Display
 	jsr lcd_instruction
 
-	lda #%01001000	    	; Print an H
-	jsr lcd_character
-
-	lda #%11000000	    	; Move cursor to next line
-	jsr lcd_instruction
-
+	ldx #0			; init X as counter
+print:
+	lda message,x		; load character from message into A offset by X
+	beq loop		; break if A is loaded with zero(essentially null terminated string)
+	jsr lcd_character	; Jump to print character to LCD screen
+	inx			; increment X to move to next character in message
+	jmp print
+ 
 loop:
 	jmp loop 	        	; effectively halt here
 

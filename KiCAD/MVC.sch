@@ -929,7 +929,7 @@ Wire Wire Line
 	3000 1450 3100 1450
 Connection ~ 3000 1450
 $Comp
-L 65XX:6522 U5
+L MVC-rescue:6522-65XX U5
 U 1 1 5F878B38
 P 10250 4250
 F 0 "U5" H 10250 6515 50  0000 C CNN
@@ -972,21 +972,21 @@ Wire Wire Line
 Wire Wire Line
 	9850 2750 9600 2750
 Text Label 9650 2750 0    50   ~ 0
-d0
-Text Label 9650 2850 0    50   ~ 0
-d1
-Text Label 9650 2950 0    50   ~ 0
-d2
-Text Label 9650 3050 0    50   ~ 0
-d3
-Text Label 9650 3150 0    50   ~ 0
-d4
-Text Label 9650 3250 0    50   ~ 0
-d5
-Text Label 9650 3350 0    50   ~ 0
-d6
-Text Label 9650 3450 0    50   ~ 0
 d7
+Text Label 9650 2850 0    50   ~ 0
+d6
+Text Label 9650 2950 0    50   ~ 0
+d5
+Text Label 9650 3050 0    50   ~ 0
+d4
+Text Label 9650 3150 0    50   ~ 0
+d3
+Text Label 9650 3250 0    50   ~ 0
+d2
+Text Label 9650 3350 0    50   ~ 0
+d1
+Text Label 9650 3450 0    50   ~ 0
+d0
 $Comp
 L Device:C C8
 U 1 1 5F8CDD85
@@ -1263,57 +1263,13 @@ $EndComp
 $Comp
 L 74xx:74HC00 U6
 U 3 1 5FA976A2
-P 4950 6600
-F 0 "U6" H 4950 6925 50  0000 C CNN
-F 1 "74HC00" H 4950 6834 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4950 6600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4950 6600 50  0001 C CNN
-	3    4950 6600
+P 5350 6600
+F 0 "U6" H 5350 6925 50  0000 C CNN
+F 1 "74HC00" H 5350 6834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5350 6600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 5350 6600 50  0001 C CNN
+	3    5350 6600
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D D1
-U 1 1 5FA9BD48
-P 3500 6300
-F 0 "D1" H 3650 6200 50  0000 C CNN
-F 1 "1N4148" H 3300 6200 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 3500 6300 50  0001 C CNN
-F 3 "~" H 3500 6300 50  0001 C CNN
-	1    3500 6300
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D D2
-U 1 1 5FA9D040
-P 3500 6500
-F 0 "D2" H 3650 6400 50  0000 C CNN
-F 1 "1N4148" H 3300 6400 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 3500 6500 50  0001 C CNN
-F 3 "~" H 3500 6500 50  0001 C CNN
-	1    3500 6500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D D3
-U 1 1 5FA9D35C
-P 3500 6700
-F 0 "D3" H 3650 6600 50  0000 C CNN
-F 1 "1N4148" H 3300 6600 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 3500 6700 50  0001 C CNN
-F 3 "~" H 3500 6700 50  0001 C CNN
-	1    3500 6700
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D D4
-U 1 1 5FA9D5B5
-P 3500 6900
-F 0 "D4" H 3650 6800 50  0000 C CNN
-F 1 "1N4148" H 3300 6800 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 3500 6900 50  0001 C CNN
-F 3 "~" H 3500 6900 50  0001 C CNN
-	1    3500 6900
-	-1   0    0    1   
 $EndComp
 Entry Wire Line
 	2750 6200 2850 6300
@@ -1340,41 +1296,15 @@ a5
 Text Label 3000 6900 0    50   ~ 0
 a4
 Wire Wire Line
-	3650 6300 4050 6300
+	4950 6500 5050 6500
 Wire Wire Line
-	4050 6300 4050 6500
-Wire Wire Line
-	3650 6500 4050 6500
-Connection ~ 4050 6500
-Wire Wire Line
-	4050 6500 4050 6600
-Wire Wire Line
-	3650 6900 4050 6900
-Wire Wire Line
-	3650 6700 4050 6700
-Connection ~ 4050 6700
-Wire Wire Line
-	4050 6700 4050 6900
-Wire Wire Line
-	4050 6600 4550 6600
-Wire Wire Line
-	4550 6600 4550 6500
-Wire Wire Line
-	4550 6500 4650 6500
-Connection ~ 4050 6600
-Wire Wire Line
-	4050 6600 4050 6700
-Wire Wire Line
-	4550 6600 4550 6700
-Wire Wire Line
-	4550 6700 4650 6700
-Connection ~ 4550 6600
+	4950 6700 5050 6700
 Wire Wire Line
 	9850 2550 9300 2550
 Wire Wire Line
 	9300 2550 9300 6600
 Wire Wire Line
-	9300 6600 5250 6600
+	9300 6600 5650 6600
 Connection ~ 2750 4550
 Connection ~ 4400 4550
 Entry Wire Line
@@ -1611,7 +1541,7 @@ F 3 "" H 13550 5650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 65XX:6502 U2
+L MVC-rescue:6502-65XX U2
 U 1 1 5FFC5BE1
 P 3600 3200
 F 0 "U2" H 3600 4365 50  0000 C CNN
@@ -1879,7 +1809,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 1050 4550 1450
 Text Label 4300 2600 2    50   ~ 0
-CLK
+~CLK~
 Text Label 14300 7850 0    50   ~ 0
 BE
 Text Label 13600 7850 2    50   ~ 0
@@ -1928,6 +1858,52 @@ Wire Wire Line
 	14200 7450 14300 7450
 Wire Wire Line
 	14300 7350 14200 7350
+Wire Wire Line
+	4950 6500 4950 6600
+$Comp
+L 74xx:74HC00 U6
+U 4 1 609C19CC
+P 4650 6600
+F 0 "U6" H 4650 6925 50  0000 C CNN
+F 1 "74HC00" H 4650 6834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4650 6600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4650 6600 50  0001 C CNN
+	4    4650 6600
+	1    0    0    -1  
+$EndComp
+Connection ~ 4950 6600
+Wire Wire Line
+	4950 6600 4950 6700
+$Comp
+L 74xx:74HC02 U8
+U 1 1 60B6F349
+P 3650 6400
+F 0 "U8" H 3650 6725 50  0000 C CNN
+F 1 "74HC02" H 3650 6634 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3650 6400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 3650 6400 50  0001 C CNN
+	1    3650 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC02 U8
+U 2 1 60B70E88
+P 3650 6800
+F 0 "U8" H 3650 6500 50  0000 C CNN
+F 1 "74HC02" H 3650 6600 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3650 6800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc02" H 3650 6800 50  0001 C CNN
+	2    3650 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 6400 3950 6500
+Wire Wire Line
+	3950 6500 4350 6500
+Wire Wire Line
+	3950 6800 3950 6700
+Wire Wire Line
+	3950 6700 4350 6700
 Wire Bus Line
 	4400 4550 5250 4550
 Wire Bus Line

@@ -3,11 +3,7 @@
 ; which has been modified to run in the different address space I am using on this project
 ; and is used as a basic hardware test.
 
-;65C22 Registers
-PORTB = $9F00
-PORTA = $9F01
-DDRB = $9F02
-DDRA = $9F03
+  .include "addrs.s"
 
 ;LCD Control Pins
 E  = %10000000

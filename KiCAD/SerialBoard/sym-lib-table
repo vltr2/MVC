@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name 65XX)(type Legacy)(uri /home/vltr/MVC/KiCAD/65XX.lib)(options "")(descr ""))
+  (lib (name MVC-rescue)(type Legacy)(uri /home/vltr/MVC/KiCAD/MVC-rescue.lib)(options "")(descr ""))
+)
